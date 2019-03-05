@@ -22,7 +22,7 @@ namespace Carter.Screens
         KeyboardState _oldKeyState;
         int lvlW = 64;
         int lvlH = 64;
-        int seed = 271400582;
+        int seed = 1694537278;
         int maxRooms = 10;
         bool shortcuts = true;
         Random random = new Random();
@@ -50,7 +50,7 @@ namespace Carter.Screens
             var tilesTexture = _content.Load<Texture2D>("tiles");
             LevelSprites.Initialise(tilesTexture);
 
-            _lvlgen = new Generator(seed) { includeShortcuts = shortcuts, maxRoomCount = maxRooms, Visualise = true };
+            _lvlgen = new Generator(seed) { includeShortcuts = shortcuts, maxRoomCount = maxRooms, Visualise = false };
             genThread = new Thread(GenerateLevel);
             genThread.Start();
 
@@ -60,6 +60,15 @@ namespace Carter.Screens
         {
             _lvlgen.SetSeed(seed);
             _lvlgen.GenerateLevel(lvlW, lvlH);
+
+            /* int count = 0;
+             while (!_lvlgen.Faulty && count < 100000)
+              {
+                  _lvlgen.GenerateLevel(lvlW, lvlH);
+                  count++;
+                  if (count % 10 == 0)
+                      Console.WriteLine("count: {0}", count);
+              }*/
         }
 
 
@@ -147,6 +156,28 @@ namespace Carter.Screens
             }
 
 
+            if (keyState.IsKeyDown(Keys.C) && _oldKeyState.IsKeyUp(Keys.C))
+            {
+                var rooms = _lvlgen.LVL.Rooms;
+                for (int i = 0; i < rooms.Count; i++)
+                {
+                    Console.WriteLine("Connections of room {0}:", rooms[i].Index);
+                    foreach (var c in rooms[i].Connections)
+                    {
+                        Console.WriteLine("  - to room {0} from point {1}", c.Key.Index, c.Value);
+                    }
+
+                }
+                for (int i = 0; i < rooms.Count; i++)
+                {
+                    for (int j = 0; j < rooms.Count; j++)
+                    {
+                        Console.WriteLine("Number of rooms between {0} and {1} is {2}", rooms[i].Index, rooms[j].Index, rooms[i].DistanceTo(rooms[j]));
+                    }
+                }
+            }
+
+
                 _oldKeyState = keyState;
             base.Update(gameTime);
         }
@@ -154,7 +185,6 @@ namespace Carter.Screens
         public override void Draw(GameTime gameTime)
         {
             int tileSize = 16;
-
             _spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, _camera.Transform);
             for (int x = 0; x < _area.Width; x++)
             {

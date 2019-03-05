@@ -28,7 +28,7 @@ namespace Carter.Pathfinding
         public static List<Point> GetAPath(Point start, Point end, BitArray collision, int mapWidth, int maxLength = 0)
         {
             if (end == start)
-                return new List<Point>();
+                return new List<Point>() { start };
             int mapHeight = collision.Length / mapWidth;
             List<AStarNode> OpenNodes = new List<AStarNode>();
             List<AStarNode> ClosedNodes = new List<AStarNode>();
