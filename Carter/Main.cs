@@ -20,7 +20,14 @@ namespace Carter
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.IsFullScreen = true;
+
+            IsMouseVisible = true;
+
+            graphics.IsFullScreen = false;
+            graphics.PreferredBackBufferWidth = 1920;
+            graphics.PreferredBackBufferHeight = 1080;
+
+            Components.Add(new Screens.GameComponent(this));
         }
 
         /// <summary>
@@ -31,7 +38,6 @@ namespace Carter
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
             base.Initialize();
         }
 
@@ -41,10 +47,7 @@ namespace Carter
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            //TODO: use this.Content to load your game content here 
         }
 
         /// <summary>
@@ -63,7 +66,8 @@ namespace Carter
                 Exit();
             }
 #endif
-            // TODO: Add your update logic here			
+            
+
             base.Update(gameTime);
         }
 
@@ -75,7 +79,6 @@ namespace Carter
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            //TODO: Add your drawing code here
 
             base.Draw(gameTime);
         }

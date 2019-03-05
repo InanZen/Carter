@@ -9,12 +9,19 @@
     <Import_RootNamespace>Carter</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Level\Area.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Level\Generator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Level\LevelSprites.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Level\Tile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Main.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Content\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pathfinding\AStar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pathfinding\LOS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\GameComponent.cs" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
   </ItemGroup>
 </Project>

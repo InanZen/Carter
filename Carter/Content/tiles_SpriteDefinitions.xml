@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+	<Asset Type="InanZEngine.GUI.SpriteDefinition[]">
+		<Item>
+			<Name>floor_1_1</Name>
+			<Source>0 0 36 36</Source>
+		</Item>
+	</Asset>
+</XnaContent>  

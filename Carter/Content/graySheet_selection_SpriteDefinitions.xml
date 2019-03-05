@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+	<Asset Type="InanZEngine.GUI.SpriteDefinition[]">
+		<Item>
+			<Name>checkbox_unchecked</Name>
+			<Source>0 0 36 36</Source>
+		</Item>
+		<Item>
+			<Name>checkbox_checked</Name>
+			<Source>36 0 36 36</Source>
+		</Item>
+		<Item>
+			<Name>radio_unchecked</Name>
+			<Source>72 0 36 36</Source>
+		</Item>
+		<Item>
+			<Name>radio_checked</Name>
+			<Source>108 0 36 36</Source>
+		</Item>
+		<Item>
+			<Name>slider_handle_up</Name>
+			<Source>0 36 28 41</Source>
+		</Item>
+		<Item>
+			<Name>slider_handle_down</Name>
+			<Source>28 36 28 41</Source>
+		</Item>
+		<Item>
+			<Name>slider_handle_left</Name>
+			<Source>56 36 39 31</Source>
+		</Item>
+		<Item>
+			<Name>slider_handle_right</Name>
+			<Source>95 36 39 31</Source>
+		</Item>
+		<Item>
+			<Name>slider_horizontal_end</Name>
+			<Source>56 67 8 10</Source>
+		</Item>
+		<Item>
+			<Name>slider_horizontal_mid</Name>
+			<Source>64 67 40 4</Source>
+		</Item>
+		<Item>
+			<Name>slider_vertical_end</Name>
+			<Source>126 67 10 8</Source>
+		</Item>
+		<Item>
+			<Name>slider_vertical_mid</Name>
+			<Source>136 36 4 40</Source>
+		</Item>
+		<Item>
+			<Name>inputbox</Name>
+			<Source>0 77 190 49</Source>
+		</Item>
+		<Item>
+			<Name>inputbox_gray</Name>
+			<Source>190 77 190 49</Source>
+		</Item>
+		<Item>
+			<Name>button1_unpressed</Name>
+			<Source>0 126 190 49</Source>
+		</Item>
+		<Item>
+			<Name>button1_pressed</Name>
+			<Source>190 126 190 49</Source>
+		</Item>
+		<Item>
+			<Name>button2_unpressed</Name>
+			<Source>0 175 190 49</Source>
+		</Item>
+		<Item>
+			<Name>button2_pressed</Name>
+			<Source>190 175 190 49</Source>
+		</Item>
+		<Item>
+			<Name>button_arrow_down_gray</Name>
+			<Source>144 0 24 24</Source>
+		</Item>
+		<Item>
+			<Name>button_arrow_up_gray</Name>
+			<Source>168 0 24 24</Source>
+		</Item>
+		<Item>
+			<Name>button_arrow_down_white</Name>
+			<Source>144 24 24 24</Source>
+		</Item>
+		<Item>
+			<Name>button_arrow_up_white</Name>
+			<Source>168 24 24 24</Source>
+		</Item>
+		<Item>
+			<Name>arrow_down_gray</Name>
+			<Source>144 49 15 10</Source>
+		</Item>
+		<Item>
+			<Name>arrow_up_gray</Name>
+			<Source>160 49 15 10</Source>
+		</Item>
+		<Item>
+			<Name>arrow_down_white</Name>
+			<Source>144 60 15 10</Source>
+		</Item>
+		<Item>
+			<Name>arrow_up_white</Name>
+			<Source>160 60 15 10</Source>
+		</Item>
+		<Item>
+			<Name>frame1_tl</Name>
+			<Source>192 0 8 8</Source>
+		</Item>
+		<Item>
+			<Name>frame1_t</Name>
+			<Source>200 0 8 8</Source>
+		</Item>
+		<Item>
+			<Name>frame1_tr</Name>
+			<Source>208 0 8 8</Source>
+		</Item>
+		<Item>
+			<Name>frame1_l</Name>
+			<Source>192 8 8 8</Source>
+		</Item>
+		<Item>
+			<Name>frame1_c</Name>
+			<Source>200 8 8 8</Source>
+		</Item>
+		<Item>
+			<Name>frame1_r</Name>
+			<Source>208 8 8 8</Source>
+		</Item>
+		<Item>
+			<Name>frame1_bl</Name>
+			<Source>192 16 8 8</Source>
+		</Item>
+		<Item>
+			<Name>frame1_b</Name>
+			<Source>200 16 8 8</Source>
+		</Item>
+		<Item>
+			<Name>frame1_br</Name>
+			<Source>208 16 8 8</Source>
+		</Item>
+	</Asset>
+</XnaContent>  
